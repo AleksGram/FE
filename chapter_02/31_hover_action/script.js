@@ -1,8 +1,10 @@
 $(document).ready(function(){
-  $('#celebs tbody tr:even').addClass('zebra');
-  $('#celebs tbody tr').hover(function(){
-    $(this).addClass('zebraHover');
-  }, function(){
-    $(this).removeClass('zebraHover');
-  });
+$('.spoiler').hide();
+$('<span class="revealer">Tell me!</span>').insertBefore('.spoiler');
+$('.revealer').html('<strong>TELL ME</strong>');
+$('.revealer').click(function(){
+$(this).hide();
+$(this).next().fadeIn();
+$(this).prev().show();
+});
 });

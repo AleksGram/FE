@@ -1,3 +1,5 @@
+/*
 $(document).ready(function(){
-  alert('Welcome to StarTrackr! Now no longer under police investigation!');
-});
+  alert('Way!!!!!   Welcome to StarTrackr! Now no longer under police investigation!');
+});*/
+$(function(){alert('Ready!!!!!!')})

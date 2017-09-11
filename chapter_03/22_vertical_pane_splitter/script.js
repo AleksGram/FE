@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('#splitter > div:first').resizable({ 
-    handles: 's', 
+    handles: 's',
     minHeight : '50',
     maxHeight : '200',
     resize: function() { 

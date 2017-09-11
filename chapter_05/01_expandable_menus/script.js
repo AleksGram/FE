@@ -10,4 +10,5 @@ $(document).ready(function() {
   }, function() {
   	$(this).find('ul').slideUp();
   });
+  alert('hello from script');
 });

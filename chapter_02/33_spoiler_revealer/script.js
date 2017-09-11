@@ -1,8 +1,12 @@
 $(document).ready(function(){
   $('.spoiler').hide();
-  $('<input type="button" class="revealer" value="Tell Me!"/>').insertBefore('.spoiler');
+  $('<span class="revealer">Tell Me!</>').insertBefore('.spoiler');
   $('.revealer').click(function(){
     $(this).hide();
     $(this).next().fadeIn();
+    $('.spoiler').animate({
+        padding: '20px',
+        fontSize: '30px'
+      }, 2000);
   });
 });

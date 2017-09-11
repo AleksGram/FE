@@ -1,6 +1,7 @@
 $(document).ready(function(){
   stylesheetToggle();
   $(window).resize(stylesheetToggle);
+   $('p').resizable();
 });
 
 function stylesheetToggle() {
@@ -9,5 +10,6 @@ function stylesheetToggle() {
       .appendTo('head');
   } else {
     $('link[href="wide.css"]').remove();
-  } 
+  }
+
 }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('p').animate({ 
+  $('tbody').animate({
     padding: '20px',
     fontSize: '30px'
   }, 2000);
