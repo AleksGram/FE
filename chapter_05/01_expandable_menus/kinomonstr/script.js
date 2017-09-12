@@ -6,8 +6,31 @@ e.stopPropagation();
 })
 
 $('#menu > li').toggle(function(){
-$(this).find('ul').slideDown();
+$(this)
+.css('background-position', 'right -20px')
+.find('ul').slideDown();
 }, function(){
-$(this).find('ul').slideUp();
+$(this)
+.css('background-position', 'right top')
+.find('ul').slideUp();
+})
+
+$('#menu >li').hover(function(){
+$(this).addClass('waiting');
+setTimeout(function(){
+  $('#menu .waiting')
+  .click()
+  .removeclass('waiting');
+},600);
+},function(){
+$('#menu .waiting').removeClass('waiting');
 });
+
+
+
+
+
+
 });
+
+
