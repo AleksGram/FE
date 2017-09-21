@@ -15,7 +15,7 @@ $( '#menu > li > ul' )
       .css('background-position', 'right top')
       .find('ul').slideUp();
   });
-  
+
   $('#menu > li').hover(function() {
     $(this).addClass('waiting');
     setTimeout(function() {
