@@ -7,17 +7,17 @@ $(document).ready(function(){
     .hide();
     
   $('#celebs ul > li').click(function(){
-    var selfClick = $(this).find('ul:first').is(':visible');
+    var selfClick = $(this).find('ul').is(':visible');
     if(!selfClick) {
       $(this)
         .parent()
         .find('> li ul:visible')
         .slideToggle();
     }
-    
+
     $(this)
       .find('ul:first')
-      .stop(true, true)
+      //.stop(true, true)
       .slideToggle();
   });
 });
