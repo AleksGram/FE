@@ -37,6 +37,33 @@ h2 {
   font-size: 140%;
 }
 
+#info{
+float:left;
+width:800px;
+hight:400px;
+border: 1px solid #999;
+margin: 0;
+padding: 3px 0;
+list-style: none;
+
+}
+
+#info-nav li{
+display:inline;
+border: 1px solid;
+border-bottom: 0;
+margin-right:2px;
+	padding: 3px;
+}
+#info-nav li a:hover{
+	color:#d15600;
+}
+#info-nav li.current{
+	background: #fff;
+	padding-bottom: 4px;
+
+}
+
 /* Accordion */
 .accord>div{
 border: 2px solid;
@@ -64,7 +91,7 @@ margin:0;
 list-style:none;
 }
 #menu li{
-float:left;
+float:right;
 background:#ECEF91;
 }
 #menu a{
