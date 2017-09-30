@@ -170,8 +170,9 @@ hr {
 }
 
 .sidebar_container {
-  float: right;;
+  float: right;
   width: 224px;
+   margin:10px;
 }
 
 .sidebar {

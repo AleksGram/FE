@@ -41,6 +41,7 @@ $(this)
 
 });
 
+/*
 $('#info p:not(:first)').hide();
 
 $('#info-nav li').click(function(event){
@@ -53,9 +54,18 @@ var clicked = $(this).find('a:first').attr('href');
 $('#info '+ clicked).fadeIn('fast');
 
 }).eq(0).addClass('current');
+*/
+$('#info').tabs({
+event: 'mouseover',
+fx: {
+opacity: 'toggle',
+duration: 'fast'
+},
+spinner: 'Loading.....',
+cache: true
+});
 
-
-
+$('#info').tabs().tabs('rotate', 3500);
 
 
 
