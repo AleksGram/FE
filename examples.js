@@ -377,3 +377,55 @@ class Personal extends Person {
         console.log(this.age);
     }
 }
+  //Promise
+  function myAsyncFunction(url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onload = () => resolve(xhr.responseText);
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
+  });
+}
+  
+  //one more
+  var Progress = function(){
+      	var elem = this.element = document.createElement("DIV");
+      	elem.className = "waitingAnimation";
+};
+
+Progress.prototype = {
+      	showUntilRequestsAreFinished: function(promise){
+                	var progressElement = this.element;
+                	document.body.appendChild(progressElement);
+
+                	promise.then(function(){
+                          	document.body.removeChild(progressElement);
+                	}, function(){
+                          	document.body.removeChild(progressElement);
+                	})
+      	};
+};
+
+var onError = function(){
+      	alert("error");
+};
+
+var promiseForAllChainOfRequests = connection.request({
+      	entity: "pie",
+      	type: "apple"
+}).then(function getIngredients(pie){
+      	//success, we have data about pie, and we will return only its ingredients
+      	return pie.ingredients;
+}, onError).then(function requestShops(ingredients){
+      	//эта функция будет вызвана сразу после предыдущей
+      	return connection.request({
+                	entity: "shop",
+                	goods: ingredients
+      	};
+}, onError).then(function showAllOpenedShops(shops){
+      	//эта функция будет вызвана, когда выполнится запрос для получения магазинов
+}, onError);
+
+progress = new Progress();
+progress.showUntilRequestsAreFinished(promiseForAllChainOfRequests);
